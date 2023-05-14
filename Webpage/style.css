@@ -56,6 +56,15 @@ nav .left .search_bar input{
     font-size: 16px;
     width: 200px;
 }
+nav .left .search_button{
+    padding: 10px 20px;
+    font-size: 16px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
 
 nav .center{
     position: relative;

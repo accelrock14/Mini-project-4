@@ -56,6 +56,15 @@ nav .left .search_bar input{
     font-size: 16px;
     width: 200px;
 }
+nav .left .search_button{
+    padding: 10px 20px;
+    font-size: 16px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
 
 nav .center{
     position: relative;
@@ -155,12 +164,14 @@ nav .right img{
     cursor: pointer;
 }
 
-.main .center .user_post .user_post_top .img_and_name .username .username{
+.main .center .user_post .user_post_top .img_and_name .username{
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
-.main .center .user_post .user_post_top .img_and_name .username .username:hover{
+.main .center .user_post .user_post_top .img_and_name .username:hover{
     text-decoration: underline;
 }
 

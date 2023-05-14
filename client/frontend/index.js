@@ -20,6 +20,7 @@ var images = [
     image: "post3.jpeg",
     desc: "This in an image",
     profile: "user3.html",
+
     profilePic: "p3.jpeg",
     username: "user3",
     tags: ["tag2", "tag5", "tag6"],
