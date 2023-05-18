@@ -1,43 +1,43 @@
 var images = [
   {
-    image: "post_1.jpg",
-    source: "github.com",
-    profile: "url.com",
-    profilePic: "profile_1.jpg",
-    username: "user1",
-    tags: ["tag1", "tag2", "tag3"],
+    image: "post_1.png",
+    source: "https://github.com/accelrock14/Teleporter-game",
+    profile: "https://github.com/Ivan2001otp",
+    profilePic: "profile_1.jpeg",
+    username: "Immanuel Dsouza",
+    tags: ["unity", "c#", "gaming"],
   },
   {
-    image: "post_2.jpg",
-    source: "github.com",
-    profile: "url.com",
-    profilePic: "profile_2.jpg",
-    username: "user2",
-    tags: ["tag4", "tag5"],
+    image: "post_2.png",
+    source: "https://github.com/accelrock14/Mini-project-2",
+    profile: "https://github.com/accelrock14",
+    profilePic: "profile_2.png",
+    username: "Harisuriya Shakthidaran",
+    tags: ["android", "java"],
   },
   {
-    image: "post_3.png",
-    desc: "github.com",
-    profile: "url.com",
-    profilePic: "profile_3.jpg",
-    username: "user3",
-    tags: ["tag2", "tag5", "tag6"],
+    image: "post_3.webp",
+    source: "https://github.com/Stowaway4331/simple-midC-piano",
+    profile: "https://github.com/Stowaway4331",
+    profilePic: "profile_3.jpeg",
+    username: "Jeremy Dsouza",
+    tags: ["javascript", "react", "website"],
   },
   {
     image: "post_4.jpg",
-    desc: "github.com",
-    profile: "url.com",
-    profilePic: "profile_4.png",
-    username: "user4",
-    tags: ["tag1", "tag4", "tag6"],
+    source: "https://github.com/Kaushik268mlore/THE-WORDLE",
+    profile: "https://github.com/Kaushik268mlore",
+    profilePic: "profile_4.jpeg",
+    username: "Kaushik Kumar",
+    tags: ["javascript", "golang", "website"],
   },
   {
-    image: "post_5.jpg",
-    desc: "github.com",
-    profile: "url.com",
+    image: "post_5.png",
+    source: "https://github.com/Ivan2001otp/iMusic",
+    profile: "https://github.com/accelrock14",
     profilePic: "profile_5.png",
-    username: "user5",
-    tags: ["tag3", "tag5", "tag6"],
+    username: "Indibar Dutta",
+    tags: ["android", "java", "music"],
   },
 ];
 
@@ -67,7 +67,7 @@ for (var i = 0; i < images.length; i++) {
   menu = document.createElement("div");
   menu.classList.add("menu");
   source = document.createElement("a");
-  source.href = images[i].desc;
+  source.href = images[i].source;
   source.innerHTML = "<i class='fa-solid fa-ellipsis'></i>";
   menu.appendChild(source);
 
@@ -83,7 +83,7 @@ for (var i = 0; i < images.length; i++) {
   var description = document.createElement("div");
   description.classList.add("description");
   var tags = document.createElement("p");
-  tags.innerHTML = images[i].tags.join(", ");
+  tags.innerHTML = "Tags: " + images[i].tags.join(" ");
   description.appendChild(tags);
 
   //like, comment & share section
@@ -97,7 +97,7 @@ for (var i = 0; i < images.length; i++) {
   var comments = document.createElement("div");
   comments.classList.add("comment_warpper");
   comments.innerHTML =
-    "<img src='image/profile.png'><div class='circle'></div><div class='comment_search'><input type='text' placeholder='Write a comment'><i class='fa-regular fa-face-smile'></i><i class='fa-solid fa-camera'></i><i class='fa-regular fa-note-sticky'></i></div>";
+    "<img src='image/profile.jpg'><div class='circle'></div><div class='comment_search'><input type='text' placeholder='Write a comment'><i class='fa-regular fa-face-smile'></i><i class='fa-solid fa-camera'></i><i class='fa-regular fa-note-sticky'></i></div>";
 
   container.appendChild(top_container);
   container.appendChild(img_container);
@@ -108,6 +108,13 @@ for (var i = 0; i < images.length; i++) {
   container.appendChild(document.createElement("hr"));
   container.appendChild(comments);
   document.getElementById("center").appendChild(container);
+}
+
+var links = document.getElementsByTagName("a");
+var len = links.length;
+
+for (var i = 0; i < len; i++) {
+  links[i].target = "_blank";
 }
 
 // Function to search for images based on tags
@@ -146,7 +153,7 @@ function searchImages() {
       menu = document.createElement("div");
       menu.classList.add("menu");
       source = document.createElement("a");
-      source.href = image.desc;
+      source.href = image.source;
       source.innerHTML = "<i class='fa-solid fa-ellipsis'></i>";
       menu.appendChild(source);
 
@@ -162,7 +169,7 @@ function searchImages() {
       var description = document.createElement("div");
       description.classList.add("description");
       var tags = document.createElement("p");
-      tags.innerHTML = image.tags.join(", ");
+      tags.innerHTML = "Tags: " + image.tags.join(" ");
       description.appendChild(tags);
 
       //like, comment & share section
@@ -176,7 +183,7 @@ function searchImages() {
       var comments = document.createElement("div");
       comments.classList.add("comment_warpper");
       comments.innerHTML =
-        "<img src='image/profile.png'><div class='circle'></div><div class='comment_search'><input type='text' placeholder='Write a comment'><i class='fa-regular fa-face-smile'></i><i class='fa-solid fa-camera'></i><i class='fa-regular fa-note-sticky'></i></div>";
+        "<img src='image/profile.jpg'><div class='circle'></div><div class='comment_search'><input type='text' placeholder='Write a comment'><i class='fa-regular fa-face-smile'></i><i class='fa-solid fa-camera'></i><i class='fa-regular fa-note-sticky'></i></div>";
 
       container.appendChild(top_container);
       container.appendChild(img_container);
@@ -187,6 +194,12 @@ function searchImages() {
       container.appendChild(document.createElement("hr"));
       container.appendChild(comments);
       center.appendChild(container);
+      var links = document.getElementsByTagName("a");
+      var len = links.length;
+
+      for (var i = 0; i < len; i++) {
+        links[i].target = "_blank";
+      }
     }
   });
 }
